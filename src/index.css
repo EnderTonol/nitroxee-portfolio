@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+
+
+@font-face {
+  font-family: 'FIHover-Display';
+  src: url('./assets/fonts/FIHover-Display.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'XWide-3';
+  src: url('./assets/fonts/946-latin-xwide-3.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+ font-family: 'Poppins';
+ src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ font-weight: normal;
+ font-style: normal;
+}
+
+@font-face {
+ font-family: 'Poppins-Bold';
+ src: url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ font-weight: bold;
+ font-style: normal;
+}
+
+@layer picture-border{
+  picture {
+    display: grid;
+    width: 400px;
+    aspect-ratio: 4/3;
+    --bc: #B2EC2B; /*border-color*/
+    --bs: 10px; /*border-size*/
+    --cs: 20px; /*cut-size*/
+    grid-template-rows: var(--cs) auto 1fr;
+  }
+  picture > figcaption {
+    grid-area: 1/1/2/2;
+    justify-self: end;
+    min-width: 50%;
+    min-height: calc(var(--cs) * 2 + var(--bs));
+
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: var(--bc);
+
+    clip-path: polygon(
+      var(--cs) 0,
+      100% 0,
+      100% 100%,
+      0 100%,
+      0 var(--cs)
+    );
+  }
+  picture > img{
+    grid-area: 2/1/4/2;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    --em: .5;
+    clip-path: polygon(
+      calc(var(--cs) + var(--bs) * var(--em)) var(--bs), 
+      calc(100% - var(--bs)) var(--bs),
+      calc(100% - var(--bs)) calc(100% - var(--cs) - var(--bs)),
+      calc(50% + var(--cs) - var(--bs) * var(--em)) calc(100% - var(--cs) - var(--bs)),
+      calc(50% - var(--bs) * var(--em)) calc(100% - var(--bs)),
+      var(--bs) calc(100% - var(--bs)),
+      var(--bs) calc(var(--cs) + var(--bs) * var(--em))
+      );    
+  }
+  picture::before{ /*border*/
+    content: "";
+    grid-area: 2/1/4/2;
+    background-color: var(--bc);
+    clip-path: polygon(
+      var(--cs) 0, 
+      100% 0,
+      100% calc(100% - var(--cs)),
+      calc(50% + var(--cs)) calc(100% - var(--cs)),
+      50% 100%,
+      0% 100%,
+      0 var(--cs)
+    );
+  }
+}
+
