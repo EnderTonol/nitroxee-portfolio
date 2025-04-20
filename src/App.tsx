@@ -5,7 +5,7 @@ import Code from './components/coding';
 import Grid from './components/com-ui/grid';
 function App() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="overflow-x-hidden min-h-screen bg-black">
       <div className="relative w-full">
         <div className="top-0 w-full h-[40px] bg-slate-400 flex items-center justify-center z-50">
           <h1 className="text-xl tracking-wider font-fihover">nitroXee</h1>

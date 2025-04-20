@@ -1,6 +1,6 @@
 function Arts() {
   return (
-    <div className="pb-6 h-screen bg-black">
+    <div className="pb-6 bg-black">
       <h2 className="text-3xl text-center text-greenyellow font-Xwide">
         Tech Arts
       </h2>
