@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="overflow-x-hidden min-h-screen bg-black">
       <div className="relative w-full">
-        <div className="top-0 w-full h-[40px] bg-slate-400 flex items-center justify-center z-50">
+        <div className="top-0 w-full h-[40px] bg-white flex items-center justify-center z-50">
           <h1 className="text-xl tracking-wider font-fihover">nitroXee</h1>
         </div>
         <div className="relative pt-[40px]">
