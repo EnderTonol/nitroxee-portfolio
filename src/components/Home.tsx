@@ -1,6 +1,3 @@
-import Spline from "@splinetool/react-spline";
-import ui_logo from "../assets/icons/ui.svg";
-import code_logo from "../assets/icons/code.svg";
 function Home() {
   return (
     <div className="flex flex-col p-5 w-full h-svh">
@@ -12,7 +9,7 @@ function Home() {
         <h1 className="text-9xl tracking-wider text-greenyellow font-Xwide">
           Portfolio.
         </h1>
-
+        
         <div className="flex flex-row gap-2">
           <picture>
             <img
@@ -21,29 +18,9 @@ function Home() {
             />
             <figcaption className="text-2xl font-Xwide">UI/UX</figcaption>
           </picture>
-          <div className="flex flex-col gap-2">
-          <div className="flex flex-row gap-2 items-center px-2 w-56 h-12 bg-customgreen">
-            <img
-              src={ui_logo}
-              alt="UX Design Icon"
-              width="24"
-              height="24"
-            />
-            <h1 className="font-Xwide">Designing</h1>
-          </div>
-          <div className="flex flex-row gap-2 items-center px-2 w-56 h-12 bg-customgreen">
-            <img
-              src={code_logo}
-              alt="UX Design Icon"
-              width="24"
-              height="24"
-            />
-            <h1 className="font-Xwide">Developement</h1>
-            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 export default Home;

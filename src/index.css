@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+html{
+  overflow-y: visible;
+}
 
 
 @font-face {
