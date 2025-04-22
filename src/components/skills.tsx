@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from 'react';
+import { useState, lazy, Suspense } from 'react';
 
 // Lazy load the Spline component
 const LazySpline = lazy(() => import('@splinetool/react-spline'));
