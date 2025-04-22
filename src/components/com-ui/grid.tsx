@@ -2,7 +2,7 @@ export default function Grid() {
     return (
       <div className="py-24 bg-gray-50 sm:py-32">
         <div className="px-6 mx-auto max-w-2xl lg:max-w-7xl lg:px-8">
-          <h2 className="text-3xl text-center text-greenyellow font-Xwide">Claude Sonnet x nitroXee</h2>
+          <h2 className="text-xl text-center text-greenyellow font-Xwide md:text-3xl">Claude Sonnet x nitroXee</h2>
           <p className="mx-auto mt-2 max-w-lg text-4xl text-center text-white font-Xwide text-gray-950 sm:text-5xl">
             Everything you need to develope faster your app 
           </p>
